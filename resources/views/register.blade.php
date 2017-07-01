@@ -26,7 +26,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="margin-top: -70px; !important;">
 <div class="register-box">
     <div class="register-logo">
         <a href=""><b>Sheffield</b>CSI</a>
@@ -53,16 +53,6 @@
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="Telephone">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
-            </div>
-            <div class="form-group">
-
-                <div class="input-group date">
-                    <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                    </div>
-                    <input class="form-control pull-right" id="datepicker" type="text">
-                </div>
-                <!-- /.input group -->
             </div>
             <div class="form-group has-feedback">
                 <input type="password" class="form-control" placeholder="Password">
