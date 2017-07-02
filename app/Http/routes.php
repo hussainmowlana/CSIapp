@@ -20,6 +20,8 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::post('register','registerController@register');
+
 
 
 

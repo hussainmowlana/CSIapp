@@ -26,7 +26,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" style="margin-top: -70px; !important;">
 <div class="register-box">
     <div class="register-logo">
         <a href=""><b>Sheffield</b>CSI</a>
@@ -35,46 +35,36 @@
     <div class="register-box-body">
         <p class="login-box-msg">Register a new membership</p>
 
-        <form action="../../index.html" method="post">
+        <form action="register" method="post" name="register">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Full name">
+                <input type="text" class="form-control" placeholder="Full name" id="CusName" name="CusName">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email" id="CusEmail" name="CusEmail">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
 
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Address">
+                <input type="text" class="form-control" placeholder="Address" id="CusAdd" name="CusAdd">
                 <span class="glyphicon glyphicon-home form-control-feedback"></span>
             </div>
 
             <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="Telephone">
+                <input type="text" class="form-control" placeholder="Telephone" id="CusTel" name="CusTel">
                 <span class="glyphicon glyphicon-phone form-control-feedback"></span>
             </div>
-            <div class="form-group">
-
-                <div class="input-group date">
-                    <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                    </div>
-                    <input class="form-control pull-right" id="datepicker" type="text">
-                </div>
-                <!-- /.input group -->
-            </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" id="CusPass" name="CusPass">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Confirm password">
+                <input type="password" class="form-control" placeholder="Confirm password" id="CusConPass" name="CusConPass">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
 
-                <select class="form-control" >
+                <select class="form-control" id="CusType" name="CusType">
                     <option>option 1</option>
                     <option>option 2</option>
                     <option>option 3</option>
@@ -91,6 +81,7 @@
                 <!-- /.col -->
                 <div class="col-xs-12">
                     <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 </div>
                 <!-- /.col -->
             </div>
